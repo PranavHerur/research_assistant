@@ -30,6 +30,7 @@ class Paper:
     citation_count: Optional[int] = None
     reference_count: Optional[int] = None
     is_open_access: Optional[bool] = None
+    semantic_scholar_id: Optional[str] = None
 
     @classmethod
     def from_semantic_scholar(cls, paper, search_title: str = None) -> "Paper":
@@ -60,6 +61,7 @@ class Paper:
             citation_count=getattr(paper, "citationCount", None),
             reference_count=getattr(paper, "referenceCount", None),
             is_open_access=getattr(paper, "isOpenAccess", None),
+            semantic_scholar_id=getattr(paper, "paperId", None),
         )
 
     def __str__(self) -> str:
