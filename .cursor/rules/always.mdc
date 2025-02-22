@@ -1,0 +1,5 @@
+---
+description: always apply these rules
+globs: *
+---
+There is no pdf_url param from semanticScholar, stop trying to use it!
