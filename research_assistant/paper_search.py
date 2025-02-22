@@ -74,8 +74,5 @@ def search_paper(title: str) -> Optional[Paper]:
     if similarity < 0.8:
         return None
 
-    for k in paper.__dict__.keys():
-        print(f"{k}: {paper.__dict__[k]}")
-
     # Get the first (most relevant) result and convert to our Paper class
     return Paper.from_semantic_scholar(papers[0], search_title=title)
