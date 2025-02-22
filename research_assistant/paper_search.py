@@ -4,14 +4,13 @@ Module for searching academic papers using various APIs.
 
 import logging
 from difflib import SequenceMatcher
-from typing import Optional, Tuple
+from typing import Optional
 
 from semanticscholar import SemanticScholar
 from semanticscholar.Paper import Paper as SemanticScholarPaper
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 
-from research_assistant.db.config import get_db
 from research_assistant.db.models import DBPaper
 from research_assistant.models import Paper
 
